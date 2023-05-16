@@ -1,4 +1,4 @@
-package com.gdan.compent.chain;
+package com.gdan.component.chain;
 
 /**
  * 处理器

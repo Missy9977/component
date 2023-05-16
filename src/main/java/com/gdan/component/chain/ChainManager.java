@@ -1,5 +1,6 @@
-package com.gdan.compent.chain;
+package com.gdan.component.chain;
 
+import com.gdan.component.chain.test.ChainConstants;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -30,17 +31,23 @@ public class ChainManager {
     private Map<String, List<IHandler>> handlerMap;
 
     public void execute(String chainName) {
+        System.out.println("do execute, chainName is " + chainName);
+
         if (CollectionUtils.isEmpty(handlerMap)) {
             return;
         }
-        List<IHandler> handlers = handlerMap.get(chainName);
-        Optional.ofNullable(handlers).ifPresent(list -> {
+        Optional.ofNullable(handlerMap.get(chainName)).ifPresent(list -> {
             for (IHandler handler : list) {
-                int execute = handler.execute();
-                // 是否重试
-                // 记录
+                int retCode = handler.execute();
+                if (retCode != ChainConstants.RET_CODE_SUCCESS) {
+                    System.out.println("Failed to execute the chain, handlerName:"+handler.getHandlerName());
+                    // 是否重试
+                }
+                // 执行记录
             }
         });
+
+        System.out.println("exit execute, chainName is " + chainName);
     }
 
     @PostConstruct

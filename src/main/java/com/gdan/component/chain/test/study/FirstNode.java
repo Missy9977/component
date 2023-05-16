@@ -1,7 +1,7 @@
-package com.gdan.compent.chain.test.study;
+package com.gdan.component.chain.test.study;
 
-import com.gdan.compent.chain.IHandler;
-import com.gdan.compent.chain.test.ChainConstants;
+import com.gdan.component.chain.IHandler;
+import com.gdan.component.chain.test.ChainConstants;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 

@@ -1,7 +1,7 @@
-package com.gdan.compent.chain.test.study;
+package com.gdan.component.chain.test.study;
 
-import com.gdan.compent.chain.IHandler;
-import com.gdan.compent.chain.test.ChainConstants;
+import com.gdan.component.chain.IHandler;
+import com.gdan.component.chain.test.ChainConstants;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -11,13 +11,13 @@ import org.springframework.stereotype.Component;
  * @author : missy
  * @since : 2023-05-16 22:04
  */
-@Component("studySecondNode")
+@Component("studyThirdNode")
 @Order(3)
 public class ThirdNode implements IHandler {
 
     @Override
     public String getHandlerName() {
-        return "studySecondNode";
+        return "studyThirdNode";
     }
 
     @Override
