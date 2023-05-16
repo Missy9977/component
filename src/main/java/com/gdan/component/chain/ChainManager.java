@@ -40,7 +40,7 @@ public class ChainManager {
             for (IHandler handler : list) {
                 int retCode = handler.execute();
                 if (retCode != ChainConstants.RET_CODE_SUCCESS) {
-                    System.out.println("Failed to execute the chain, handlerName:"+handler.getHandlerName());
+                    System.out.println("Failed to execute the chain, handlerName:" + handler.getHandlerName());
                     // 是否重试
                 }
                 // 执行记录

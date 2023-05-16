@@ -7,6 +7,7 @@ package com.gdan.component.chain.test;
  * @since : 2023-05-16 22:07
  */
 public interface ChainConstants {
+
     int RET_CODE_SUCCESS = 0;
 
     String CHAIN_LOGIN = "login";
